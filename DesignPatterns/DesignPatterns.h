@@ -9,9 +9,6 @@
 #ifndef DesignPatterns_h
 #define DesignPatterns_h
 
-// All patterns from Design Patterns: Elements of Reusable Object-Oriented Software of GoF
-// Implemented in C++
-
 #include "AbstractFactory.h"
 #include "Builder.h"
 #include "FactoryMethod.h"
