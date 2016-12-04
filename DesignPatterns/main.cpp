@@ -2,14 +2,17 @@
 //  main.cpp
 //  DesignPatterns
 //
-//  Created by Max Reshetey on 04/12/2016.
+//  Created by Max Reshetey on 27/09/2016.
 //  Copyright © 2016 Max Reshetey. All rights reserved.
 //
 
-#include <iostream>
+#include "DesignPatterns.h"
 
-int main(int argc, const char * argv[]) {
-	// insert code here...
-	std::cout << "Hello, World!\n";
+int main(int argc, const char * argv[])
+{
+	// Type <PatternName>::test() to see the patterns in action, e.g. Strategy::test()
+
+	Strategy::test();
+
     return 0;
 }

@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		AE11D0EA1DF41AB40057420B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AE11D0E91DF41AB40057420B /* main.cpp */; };
+		AE11D10F1DF41B7C0057420B /* Composite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AE11D0F61DF41B7C0057420B /* Composite.cpp */; };
+		AE11D1101DF41B7C0057420B /* Interpreter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AE11D0FC1DF41B7C0057420B /* Interpreter.cpp */; };
+		AE11D1111DF41B7C0057420B /* Iterator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AE11D0FE1DF41B7C0057420B /* Iterator.cpp */; };
+		AE11D1121DF41B7C0057420B /* Singleton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AE11D1081DF41B7C0057420B /* Singleton.cpp */; };
+		AE11D1131DF41B7C0057420B /* Visitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AE11D10D1DF41B7C0057420B /* Visitor.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,38 @@
 /* Begin PBXFileReference section */
 		AE11D0E61DF41AB40057420B /* DesignPatterns */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DesignPatterns; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE11D0E91DF41AB40057420B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		AE11D0F01DF41B7C0057420B /* AbstractFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractFactory.h; sourceTree = "<group>"; };
+		AE11D0F11DF41B7C0057420B /* Adapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Adapter.h; sourceTree = "<group>"; };
+		AE11D0F21DF41B7C0057420B /* Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
+		AE11D0F31DF41B7C0057420B /* Builder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Builder.h; sourceTree = "<group>"; };
+		AE11D0F41DF41B7C0057420B /* ChainOfResponsibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChainOfResponsibility.h; sourceTree = "<group>"; };
+		AE11D0F51DF41B7C0057420B /* Command.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Command.h; sourceTree = "<group>"; };
+		AE11D0F61DF41B7C0057420B /* Composite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Composite.cpp; sourceTree = "<group>"; };
+		AE11D0F71DF41B7C0057420B /* Composite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Composite.h; sourceTree = "<group>"; };
+		AE11D0F81DF41B7C0057420B /* Decorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decorator.h; sourceTree = "<group>"; };
+		AE11D0F91DF41B7C0057420B /* Facade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facade.h; sourceTree = "<group>"; };
+		AE11D0FA1DF41B7C0057420B /* FactoryMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FactoryMethod.h; sourceTree = "<group>"; };
+		AE11D0FB1DF41B7C0057420B /* Flyweight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flyweight.h; sourceTree = "<group>"; };
+		AE11D0FC1DF41B7C0057420B /* Interpreter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Interpreter.cpp; sourceTree = "<group>"; };
+		AE11D0FD1DF41B7C0057420B /* Interpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Interpreter.h; sourceTree = "<group>"; };
+		AE11D0FE1DF41B7C0057420B /* Iterator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Iterator.cpp; sourceTree = "<group>"; };
+		AE11D0FF1DF41B7C0057420B /* Iterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Iterator.h; sourceTree = "<group>"; };
+		AE11D1001DF41B7C0057420B /* List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
+		AE11D1011DF41B7C0057420B /* Maze.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Maze.h; sourceTree = "<group>"; };
+		AE11D1021DF41B7C0057420B /* MazeGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MazeGame.h; sourceTree = "<group>"; };
+		AE11D1031DF41B7C0057420B /* Mediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mediator.h; sourceTree = "<group>"; };
+		AE11D1041DF41B7C0057420B /* Memento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Memento.h; sourceTree = "<group>"; };
+		AE11D1051DF41B7C0057420B /* Observer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Observer.h; sourceTree = "<group>"; };
+		AE11D1061DF41B7C0057420B /* Prototype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prototype.h; sourceTree = "<group>"; };
+		AE11D1071DF41B7C0057420B /* Proxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Proxy.h; sourceTree = "<group>"; };
+		AE11D1081DF41B7C0057420B /* Singleton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Singleton.cpp; sourceTree = "<group>"; };
+		AE11D1091DF41B7C0057420B /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		AE11D10A1DF41B7C0057420B /* State.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = State.h; sourceTree = "<group>"; };
+		AE11D10B1DF41B7C0057420B /* Strategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Strategy.h; sourceTree = "<group>"; };
+		AE11D10C1DF41B7C0057420B /* TemplateMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateMethod.h; sourceTree = "<group>"; };
+		AE11D10D1DF41B7C0057420B /* Visitor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Visitor.cpp; sourceTree = "<group>"; };
+		AE11D10E1DF41B7C0057420B /* Visitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Visitor.h; sourceTree = "<group>"; };
+		AE11D1171DF41D810057420B /* DesignPatterns.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignPatterns.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +94,65 @@
 		AE11D0E81DF41AB40057420B /* DesignPatterns */ = {
 			isa = PBXGroup;
 			children = (
+				AE11D1141DF41C1F0057420B /* Creational */,
+				AE11D1151DF41CDD0057420B /* Structural */,
+				AE11D1161DF41D270057420B /* Behavioral */,
+				AE11D1171DF41D810057420B /* DesignPatterns.h */,
 				AE11D0E91DF41AB40057420B /* main.cpp */,
 			);
 			path = DesignPatterns;
+			sourceTree = "<group>";
+		};
+		AE11D1141DF41C1F0057420B /* Creational */ = {
+			isa = PBXGroup;
+			children = (
+				AE11D1011DF41B7C0057420B /* Maze.h */,
+				AE11D1021DF41B7C0057420B /* MazeGame.h */,
+				AE11D0F01DF41B7C0057420B /* AbstractFactory.h */,
+				AE11D0F31DF41B7C0057420B /* Builder.h */,
+				AE11D0FA1DF41B7C0057420B /* FactoryMethod.h */,
+				AE11D1061DF41B7C0057420B /* Prototype.h */,
+				AE11D1081DF41B7C0057420B /* Singleton.cpp */,
+				AE11D1091DF41B7C0057420B /* Singleton.h */,
+			);
+			name = Creational;
+			sourceTree = "<group>";
+		};
+		AE11D1151DF41CDD0057420B /* Structural */ = {
+			isa = PBXGroup;
+			children = (
+				AE11D0F11DF41B7C0057420B /* Adapter.h */,
+				AE11D0F21DF41B7C0057420B /* Bridge.h */,
+				AE11D0F61DF41B7C0057420B /* Composite.cpp */,
+				AE11D0F71DF41B7C0057420B /* Composite.h */,
+				AE11D0F81DF41B7C0057420B /* Decorator.h */,
+				AE11D0F91DF41B7C0057420B /* Facade.h */,
+				AE11D0FB1DF41B7C0057420B /* Flyweight.h */,
+				AE11D1071DF41B7C0057420B /* Proxy.h */,
+			);
+			name = Structural;
+			sourceTree = "<group>";
+		};
+		AE11D1161DF41D270057420B /* Behavioral */ = {
+			isa = PBXGroup;
+			children = (
+				AE11D1001DF41B7C0057420B /* List.h */,
+				AE11D0F41DF41B7C0057420B /* ChainOfResponsibility.h */,
+				AE11D0F51DF41B7C0057420B /* Command.h */,
+				AE11D0FC1DF41B7C0057420B /* Interpreter.cpp */,
+				AE11D0FD1DF41B7C0057420B /* Interpreter.h */,
+				AE11D0FE1DF41B7C0057420B /* Iterator.cpp */,
+				AE11D0FF1DF41B7C0057420B /* Iterator.h */,
+				AE11D1031DF41B7C0057420B /* Mediator.h */,
+				AE11D1041DF41B7C0057420B /* Memento.h */,
+				AE11D1051DF41B7C0057420B /* Observer.h */,
+				AE11D10A1DF41B7C0057420B /* State.h */,
+				AE11D10B1DF41B7C0057420B /* Strategy.h */,
+				AE11D10C1DF41B7C0057420B /* TemplateMethod.h */,
+				AE11D10D1DF41B7C0057420B /* Visitor.cpp */,
+				AE11D10E1DF41B7C0057420B /* Visitor.h */,
+			);
+			name = Behavioral;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +213,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE11D0EA1DF41AB40057420B /* main.cpp in Sources */,
+				AE11D10F1DF41B7C0057420B /* Composite.cpp in Sources */,
+				AE11D1131DF41B7C0057420B /* Visitor.cpp in Sources */,
+				AE11D1101DF41B7C0057420B /* Interpreter.cpp in Sources */,
+				AE11D1111DF41B7C0057420B /* Iterator.cpp in Sources */,
+				AE11D1121DF41B7C0057420B /* Singleton.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +344,7 @@
 				AE11D0EF1DF41AB40057420B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
