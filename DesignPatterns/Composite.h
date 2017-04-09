@@ -16,7 +16,7 @@ class AbstractStrategy;
 class AbstractVisitor;
 
 // Name: Composite (object structural)
-// Intent: Compose objects (via recursive composition) into tree structures to represent part-whole hierarchies. Single interface lets individual objects and compositions to be handled uniformly.
+// Intent: Compose objects (via recursive composition) into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
 // Key: The key to the Composite pattern is an abstract class that represents both primitives and their containers.
 
 // The Component defines interface to enforce uniform handling
