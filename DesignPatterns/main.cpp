@@ -12,7 +12,7 @@ int main(int argc, const char * argv[])
 {
 	// Type <PatternName>::test() to see the patterns in action, e.g. Strategy::test()
 
-	Strategy::test();
+	Bridge::test();
 
     return 0;
 }

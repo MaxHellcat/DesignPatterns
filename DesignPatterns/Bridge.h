@@ -15,11 +15,14 @@ using namespace std;
 
 // Name: Bridge (object structural), aka Handle/Body
 // Intent: Decouple an abstraction from its implementation so that the two can vary independently.
-// Key: The important thing to realize is that Window’s interface caters to the applications programmer, while WindowImp caters to window systems.
+// Key: The important thing to realize is that Window’s interface caters to the applications
+//	programmer, while WindowImp caters to window systems.
 // Notes:
 
 // WindowImp is an abstract class for objects that encapsulate window system-dependent code.
-// By hiding the implementations in WindowImp classes, we avoid polluting the Window classes with window system dependencies, which keeps the Window class hierarchy comparatively small and stable.
+// By hiding the implementations in WindowImp classes, we avoid polluting the Window classes
+//	with window system dependencies, which keeps the Window class hierarchy comparatively small and stable.
+
 class WindowImp // Goes first so Window can see the definition
 {
 public:
@@ -46,32 +49,37 @@ public:
 	virtual void deviceDrawText() { cout << "Drawing Windows text...\n"; }
 };
 
-// Window is an abstract class. Concrete subclasses of Window support the different kinds of windows that users deal with.
+// Window is an abstract class. Concrete subclasses of Window support the different
+// kinds of windows that users deal with.
 class Window
 {
 public:
 	virtual void draw()
 	{
+		cout << "Drawing abstract window..." << endl;
+
 		_imp->deviceDrawRect();
 	}
 
 	virtual void drawText()
 	{
+		cout << "Drawing abstract text..." << endl;
+
 		_imp->deviceDrawText();
 	}
 
-	void setImp(WindowImp * imp)
+	void setImp(WindowImp *imp)
 	{
 		delete _imp;
 
 		_imp = imp;
 	}
 
-	Window(WindowImp * imp) : _imp(imp) {}
+	Window(WindowImp *imp) : _imp(imp) {}
 	virtual ~Window() { delete _imp; }
 
 private:
-	WindowImp * _imp = nullptr;
+	WindowImp *_imp = nullptr;
 };
 
 class ButtonWindow: public Window
@@ -80,11 +88,13 @@ public:
 	// Drawing button envolves rect and title
 	virtual void draw() override
 	{
+		cout << "Drawing abstract button..." << endl;
+
 		Window::draw();
 		Window::drawText();
 	}
 
-	ButtonWindow(WindowImp * imp) : Window(imp) { }
+	ButtonWindow(WindowImp *imp) : Window(imp) { }
 };
 
 namespace Bridge
@@ -93,23 +103,27 @@ namespace Bridge
 	{
 		cout << "=== Bridge pattern ===\n";
 
-		// Show logical window tied with device specific window
-		Window * window = new Window(new MacWindowImp());
-		window->draw();
-		delete window;
+		{
+			// Show logical window tied with device specific window
+			const auto window = new Window(new MacWindowImp());
+			window->draw();
+			delete window;
+		}
 
 		cout << endl;
 
-		// Show run-time replacement of implementation for button
-		window = new ButtonWindow(new MacWindowImp());
-		window->draw();
+		{
+			// Show run-time replacement of implementation for button
+			const auto button = new ButtonWindow(new MacWindowImp());
+			button->draw();
 
-		cout << endl;
+			cout << endl;
 
-		window->setImp(new WinWindowImp);
-		window->draw();
+			button->setImp(new WinWindowImp);
+			button->draw();
 
-		delete window;
+			delete button;
+		}
 
 		cout << endl;
 	}
