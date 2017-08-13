@@ -28,7 +28,7 @@ public:
 	virtual ~AbstractStrategy() {}
 
 	// Using techique: Context passes itself as an argument (tighter coupling)
-	virtual void start(ListWithStrategy * list) = 0;
+	virtual void start(ListWithStrategy *list) = 0;
 
 protected:
 	AbstractStrategy() {}
@@ -38,7 +38,7 @@ protected:
 class ReverseStrategy: public AbstractStrategy
 {
 public:
-	virtual void start(ListWithStrategy * list) override
+	virtual void start(ListWithStrategy *list) override
 	{
 		cout << "ReverseStrategy: Reversing list " << list << "...\n";
 	}
@@ -52,7 +52,7 @@ class SortStrategy: public AbstractStrategy
 class InsertionSortStrategy: public SortStrategy
 {
 public:
-	virtual void start(ListWithStrategy * list) override
+	virtual void start(ListWithStrategy *list) override
 	{
 		cout << "InsertionSortStrategy: Sorting list " << list << "...\n";
 	}
@@ -61,7 +61,7 @@ public:
 class MergeSortStrategy: public SortStrategy
 {
 public:
-	virtual void start(ListWithStrategy * list) override
+	virtual void start(ListWithStrategy *list) override
 	{
 		cout << "MergeSortStrategy: Sorting list " << list << "...\n";
 	}
@@ -70,25 +70,25 @@ public:
 class ListWithStrategy: public List<int>
 {
 public:
-	void setStrategy(AbstractStrategy * strategy) { delete _strategy; _strategy = strategy; }
+	void setStrategy(AbstractStrategy *strategy) { delete _strategy; _strategy = strategy; }
 	void performStrategy() { _strategy->start(this); }
 
 private:
-	AbstractStrategy * _strategy = nullptr;
+	AbstractStrategy *_strategy = nullptr;
 };
 
 namespace Strategy
 {
+	// Example here shows how a data structure can be parameterized by different strategies that can be replaced at run-time.
+	// In real life containers know nothing about algorithms, but we use it here to show the pattern.
+
 	void test()
 	{
 		cout << "=== Strategy pattern ===\n\n";
-		
-		// Example here shows how a data structure can be parameterized by different strategies that can be replaced at run-time.
-		// In real live containers know nothing about algorithms, but we use it here to show the pattern.
 
 		ListWithStrategy list;
 
-		// See how easy it is to relace strategies
+		// See how easy it is to replace strategies
 		list.setStrategy(new ReverseStrategy);
 		list.performStrategy();
 
